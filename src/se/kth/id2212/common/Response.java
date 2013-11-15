@@ -6,64 +6,42 @@
 package se.kth.id2212.common;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
  *
  * @author Lucas
  */
 public class Response implements Serializable {
-
+    
     private ResponseStatus status;
-    private List<Player> players;
-    private int round;
+    private String hiddenWord;
+    private int leftTries;
+    private int score;
 
-    public Response(List<Player> players, ResponseStatus status, int round) {
+    public Response(ResponseStatus status, String hiddenWord, int tries, int score) {
         this.status = status;
-        this.players = players;
-        this.round = round;
+        this.hiddenWord = hiddenWord;
+        this.leftTries = tries;
+        this.score = score;
     }
 
-    /**
-     * @return the status
-     */
+    public String getHiddenWord() {
+        return hiddenWord;
+    }
+
+    public int getLeftTries() {
+        return leftTries;
+    }
+
+    public int getScore() {
+        return score;
+    }
+    
     public ResponseStatus getStatus() {
         return status;
     }
-
-    /**
-     * @param status the status to set
-     */
+    
     public void setStatus(ResponseStatus status) {
         this.status = status;
     }
-
-    /**
-     * @return the players
-     */
-    public List<Player> getPlayers() {
-        return players;
-    }
-
-    /**
-     * @param players the players to set
-     */
-    public void setPlayers(List<Player> players) {
-        this.players = players;
-    }
-
-    /**
-     * @return the round
-     */
-    public int getRound() {
-        return round;
-    }
-
-    /**
-     * @param round the round to set
-     */
-    public void setRound(int round) {
-        this.round = round;
-    }
-
 }

@@ -12,73 +12,37 @@ import java.io.Serializable;
  * @author Lucas
  */
 public class Request implements Serializable {
-    private Player player;
     private RequestStatus status;
-    private Move move;
-    private int round;
+    private char letterGuessed;
+    private String wordGuessed;
     
-    public Request(Player player, RequestStatus status) {
-        this.player = player;
+    public Request(RequestStatus status) {
         this.status = status;
-        this.move = Move.NONE;
-        this.round = 0;
     }
 
-    /**
-     * @return the player
-     */
-    public Player getPlayer() {
-        return player;
+    public Request(RequestStatus status, char letterGuessed) {
+        this.status = status;
+        this.letterGuessed = letterGuessed;
     }
 
-    /**
-     * @param player the player to set
-     */
-    public void setPlayer(Player player) {
-        this.player = player;
+    public Request(RequestStatus status, String wordGuessed) {
+        this.status = status;
+        this.wordGuessed = wordGuessed;
     }
 
-    /**
-     * @return the status
-     */
+    public char getLetterGuessed() {
+        return letterGuessed;
+    }
+
+    public String getWordGuessed() {
+        return wordGuessed;
+    }
+    
     public RequestStatus getStatus() {
         return status;
     }
 
-    /**
-     * @param status the status to set
-     */
     public void setStatus(RequestStatus status) {
         this.status = status;
-    }
-
-    /**
-     * @return the move
-     */
-    public Move getMove() {
-        return move;
-    }
-
-    /**
-     * @param move the move to set
-     */
-    public void setMove(Move move) {
-        this.move = move;
-    }
-
-    /**
-     * @return the round
-     */
-    public int getRound() {
-        return round;
-    }
-
-    /**
-     * @param round the round to set
-     */
-    public void setRound(int round) {
-        this.round = round;
-    }
-    
-    
+    }  
 }

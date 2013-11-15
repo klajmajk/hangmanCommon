@@ -11,8 +11,7 @@ package se.kth.id2212.common;
  */
 public enum ResponseStatus {
 
-    WAIT, // Wait for other players to play
-    PLAY, // You can play
-    RESULT, // Displaying the results
-    CONNECT_OK; // Connection ok
+    WON,
+    LOST,
+    PLAYED,
 }

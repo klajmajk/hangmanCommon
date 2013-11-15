@@ -11,7 +11,7 @@ package se.kth.id2212.common;
  */
 public enum RequestStatus {
 
-    CONNECT,
-    MAKE_MOVE,
-    ASK_STATUS,
+    GUESS_LETTER,
+    GUESS_WORD,
+    START_NEW_GAME,
 }
