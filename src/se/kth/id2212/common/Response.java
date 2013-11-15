@@ -44,4 +44,11 @@ public class Response implements Serializable {
     public void setStatus(ResponseStatus status) {
         this.status = status;
     }
+
+    @Override
+    public String toString() {
+        return "Response{" + "status=" + status + ", hiddenWord=" + hiddenWord + ", leftTries=" + leftTries + ", score=" + score + '}';
+    }
+    
+    
 }
